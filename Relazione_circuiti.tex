@@ -1,0 +1,81 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+
+\title{Filtro crossover} %argomento
+\date{}
+\author{Giacomo Errani Paolo Forni}
+
+\setlength{\parindent}{0pt}
+\usepackage{setspace}
+\usepackage[margin=0.5in]{geometry}
+\usepackage{float}
+\usepackage{amsfonts}
+\usepackage{pdfpages}
+\usepackage{verbatim}
+\usepackage[utf8]{inputenc}
+\usepackage{subcaption}
+
+\usepackage{graphicx}
+\graphicspath{ {./images} } %cartella immagini, separata dalla cartella files
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+\lstdefinestyle{code_style}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen},
+    keywordstyle=\color{magenta},
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2
+}
+
+\begin{document}
+
+% Some definitions
+\newcommand{\theoryF}{ $(1444 \pm 10) \; Hz $}
+\newcommand{\amplitudeF}{$(1619 \pm 1) \; Hz $}
+\newcommand{\phaseF}{$(1437 \pm 2) \; Hz $}
+
+\maketitle
+
+\section{Abstract}
+In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la frequenza \phaseF. E' stato inoltre calcolato il valore atteso \theoryF \hspace{1pt} mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter. 
+\newline
+La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella ottenuta a partire dall'ampiezza no (per ora :( ).
+\section{Apparato sperimentale}
+
+\section{Analisi}
+
+\subsection{Analisi preliminare qualitativa}
+
+\subsection{Analisi della frequenza misurata}
+
+\subsection{Analisi dell'ampiezza}
+
+\subsection{Analisi della fase}
+
+\section{Appendice}
+
+\subsection{Formule e dimostrazioni}
+
+\subsection{Correzione dettagliata errori sistematici}
+
+
+
+\end{document}
