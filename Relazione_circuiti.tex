@@ -63,7 +63,7 @@ La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il
 \section{Introduzione}
 Il filtro crossover è un circuito RLC costituito da due rami: uno con un filtro passa basso realizzato mediante un induttore e una resistenza in serie (ramo \textbf{Woofer}), l'altro un filtro passa alto realizzato mediante condensatore e resistenza in serie (ramo \textbf{Tweeter}). Le due resistenze sono identiche a meno dell'incertezza.
 
-In risposta ad un segnale oscillante in ingresso, questo è attenuato in ampiezza dal ramo Woofer se a frequenza elevata, attenuato dal ramo Tweeter se a bassa frequenza. L'attenuazione tuttavia non è nettamente definita. Si definisce frequenza di crossover $f_{cross}$ la frequenza a cui l'ampiezza dei due segnali è uguale:
+In risposta ad un segnale oscillante in ingresso, questo è attenuato in ampiezza dal ramo Woofer se a frequenza elevata, attenuato dal ramo Tweeter se a bassa frequenza. L'attenuazione tuttavia non è nettamente definita nell'intorno di un valore di frequenza dipendente dalle caratteristiche del circuito. Si definisce frequenza di crossover $f_{cross}$ la frequenza a cui l'ampiezza dei due segnali è uguale:
 
 \begin{equation}
 \label{eqn:fcross}
@@ -72,7 +72,7 @@ f_{cross} = \frac{1}{2 \pi \sqrt{LC} }
 
 dove L è l'induttanza della bobina sul ramo Woofer e C la capacità del condensatore sul ramo Tweeter.
 
-Si osserva inoltre uno sfasamento dei due rami rispetto al generatore uguale e opposto: il Woofer anticipa mentre il Tweeter ritarda. 
+Si ha inoltre, sempre alla suddetta frequenza, uno sfasamento dei due rami rispetto al generatore uguale e opposto: il Woofer anticipa, il Tweeter ritarda. 
 
 \begin{equation}
 \label{eqn:p_woofer}
@@ -83,9 +83,9 @@ Si osserva inoltre uno sfasamento dei due rami rispetto al generatore uguale e o
 \phi_{tweeter} \; = \; \arctan(\frac{1}{\omega RC})
 \end{equation}
 
-dove L e C sono definiti come in (\ref{eqn:fcross}), $\omega$ è la pulsazione dell'onda in ingresso, R la resistenza (identica)
+dove L e C sono definiti come in (\ref{eqn:fcross}), $\omega$ è la pulsazione dell'onda in ingresso, R la resistenza (identica su entrambi i rami).
 
-\paragraph{Misure effettuate}
+\subsection{Misure effettuate}
 Abbiamo misurato l'ampiezza di entrambi i canali in funzione della frequenza, riferita al ground del circuito. 
 
 La fase invece è stata misurata rispetto al canale Woofer. Si ha quindi che la fase del Tweeter rispetto al Woofer rappresenta in realtà la differenza di fase tra i due riferita al generatore.
