@@ -5,9 +5,9 @@
 \date{17 e 24 aprile, 9 maggio 2024}
 \author{Giacomo Errani 1078021 Paolo Forni}
 
-\setlength{\parindent}{0pt}
+\setlength{\parindent}{20pt}
 \usepackage{setspace}
-\usepackage[margin=0.5in]{geometry}
+\usepackage[margin=2cm]{geometry}
 \usepackage{float}
 \usepackage{amsfonts}
 \usepackage{pdfpages}
@@ -55,10 +55,28 @@
 \maketitle
 
 \section{Abstract}
-In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la frequenza \phaseF. E' stato inoltre calcolato il valore atteso \theoryF \hspace{1pt} mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter. 
-\newline
+
+\indent In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la frequenza \phaseF. E' stato inoltre calcolato il valore atteso \theoryF \hspace{1pt} mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter. 
+
 La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella ottenuta a partire dall'ampiezza no (per ora :( ).
+
+\section{Introduzione}
+Il filtro crossover è un circuito RLC costituito da due rami: uno con un filtro passa basso realizzato mediante un induttore e una resistenza in serie, l'altro un filtro passa alto realizzato mediante condensatore e resistenza in seri
+
 \section{Apparato sperimentale}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=8cm]{crossover_scheme.png}
+
+\caption{Schema del circuito}
+\label{Fig1}
+
+\end{figure}
+
+e (Figura \ref{Fig1}).
+
+
 
 \section{Analisi}
 
