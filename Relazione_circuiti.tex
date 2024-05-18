@@ -2,7 +2,7 @@
 
 \title{Filtro crossover} %argomento
 \date{17 e 24 aprile, 9 maggio 2024}
-\author{Giacomo Errani 1078021 Paolo Forni}
+\author{Giacomo Errani 1078021 Paolo Forni 0001089375}
 
 \setlength{\parindent}{20pt}
 \usepackage{setspace}
@@ -19,6 +19,10 @@
 
 \usepackage{listings}
 \usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{amsmath}
+
+\usepackage{subfiles} % Best loaded last in the preamble
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
@@ -53,85 +57,40 @@
 
 \maketitle
 
-\section{Abstract}
+\begin{abstract}
 
-\indent In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la frequenza \phaseF. E' stato inoltre calcolato il valore atteso \theoryF \hspace{1pt} mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter. 
+In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento
+in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer
+abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la
+frequenza \phaseF. È stato inoltre calcolato il valore atteso \theoryF \hspace{1pt}
+mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter.
+La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella
+ottenuta a partire dall'ampiezza no (per ora :( ).
 
-La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella ottenuta a partire dall'ampiezza no (per ora :( ).
+\end{abstract}
 
-\section{Introduzione}
-Il filtro crossover è un circuito RLC costituito da due rami: uno con un filtro passa basso realizzato mediante un induttore e una resistenza in serie (ramo \textbf{Woofer}), l'altro un filtro passa alto realizzato mediante condensatore e resistenza in serie (ramo \textbf{Tweeter}). Le due resistenze sono identiche a meno dell'incertezza.
+\section{Introduzione}\label{sec:introduzione}
 
-In risposta ad un segnale oscillante in ingresso, questo è attenuato in ampiezza dal ramo Woofer se a frequenza elevata, attenuato dal ramo Tweeter se a bassa frequenza. L'attenuazione tuttavia non è nettamente definita nell'intorno di un valore di frequenza dipendente dalle caratteristiche del circuito. Si definisce frequenza di crossover $f_{cross}$ la frequenza a cui l'ampiezza dei due segnali è uguale:
+    \subfile{Sections/1-Introduzione.tex}
 
-\begin{equation}
-\label{eqn:fcross}
-f_{cross} = \frac{1}{2 \pi \sqrt{LC} }
-\end{equation}
+\section{Apparato sperimentale}\label{sec:apparato-sperimentale}
 
-dove L è l'induttanza della bobina sul ramo Woofer e C la capacità del condensatore sul ramo Tweeter.
+    \subfile{Sections/2-Apparato_sperimentale.tex}
 
-Si ha inoltre, sempre alla suddetta frequenza, uno sfasamento dei due rami rispetto al generatore uguale e opposto: il Woofer anticipa, il Tweeter ritarda. 
+\section{Analisi}\label{sec:analisi}
 
-\begin{equation}
-\label{eqn:p_woofer}
-\phi_{woofer} \; = \; \arctan(-\frac{\omega L}{R})
-\end{equation}
-\begin{equation}
-\label{eqn:p_tweeter}
-\phi_{tweeter} \; = \; \arctan(\frac{1}{\omega RC})
-\end{equation}
+    \subfile{Sections/3-Analisi.tex}
 
-dove L e C sono definiti come in (\ref{eqn:fcross}), $\omega$ è la pulsazione dell'onda in ingresso, R la resistenza (identica su entrambi i rami).
+\appendix
 
-\subsection{Misure effettuate}
-Abbiamo misurato l'ampiezza di entrambi i canali in funzione della frequenza, riferita al ground del circuito. 
+\section*{Appendice}
 
-La fase invece è stata misurata rispetto al canale Woofer. Si ha quindi che la fase del Tweeter rispetto al Woofer rappresenta in realtà la differenza di fase tra i due riferita al generatore.
+\section{Formule e dimostrazioni}\label{sec:formule-e-dimostrazioni}
 
-\begin{equation}
-\label{eqn: p_diff}
-\phi_{diff} \; = \; \arctan(\frac{\omega L}{R}) + \arctan(\frac{1}{\omega RC})
-\end{equation}
+    \subfile{Sections/A-Formule_e_dimostrazioni.tex}
 
-Alla frequenza di cross la differenza di fase vale
+\section{Correzione dettagliata errori sistematici}\label{sec:correzione-dettagliata-errori-sistematici}
 
-\begin{equation}
-\label{eqn: pdiff_CROSS}
-\phi_{cross} \; = \; 2 \arctan(\frac{1}{R} \sqrt{\frac{L}{C}})
-\end{equation}
-
-\section{Apparato sperimentale}
-
-\begin{figure}[H]
-\centering
-\includegraphics[width=8cm]{crossover_scheme.png}
-
-\caption{Schema del circuito}
-\label{Fig1}
-
-\end{figure}
-
-e (Figura \ref{Fig1}).
-
-
-
-\section{Analisi}
-
-\subsection{Analisi preliminare qualitativa}
-
-\subsection{Analisi della frequenza misurata}
-
-\subsection{Analisi dell'ampiezza}
-
-\subsection{Analisi della fase}
-
-\section{Appendice}
-
-\subsection{Formule e dimostrazioni}
-
-\subsection{Correzione dettagliata errori sistematici}
-
-
+    \subfile{Sections/B-Correzione_dettagliata_errori_sistematici.tex}
 
 \end{document}
