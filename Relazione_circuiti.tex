@@ -30,28 +30,30 @@
 \definecolor{backcolour}{rgb}{0.95,0.95,0.92}
 
 \lstdefinestyle{code_style}{
-    backgroundcolor=\color{backcolour},   
-    commentstyle=\color{codegreen},
-    keywordstyle=\color{magenta},
-    numberstyle=\tiny\color{codegray},
-    stringstyle=\color{codepurple},
-    basicstyle=\ttfamily\footnotesize,
-    breakatwhitespace=false,         
-    breaklines=true,                 
-    captionpos=b,                    
-    keepspaces=true,                 
-    numbers=left,                    
-    numbersep=5pt,                  
-    showspaces=false,                
-    showstringspaces=false,
-    showtabs=false,                  
-    tabsize=2
+  backgroundcolor=\color{backcolour},
+  commentstyle=\color{codegreen},
+  keywordstyle=\color{magenta},
+  numberstyle=\tiny\color{codegray},
+  stringstyle=\color{codepurple},
+  basicstyle=\ttfamily\footnotesize,
+  breakatwhitespace=false,
+  breaklines=true,
+  captionpos=b,
+  keepspaces=true,
+  numbers=left,
+  numbersep=5pt,
+  showspaces=false,
+  showstringspaces=false,
+  showtabs=false,
+  tabsize=2
 }
 
 \begin{document}
 
 % Some definitions
+
 \newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequatio}}
+% usage: https://tex.stackexchange.com/questions/42726/align-but-show-one-equation-number-at-the-end
 
 \newcommand{\theoryF}{ $(1444 \pm 10)$ Hz}
 \newcommand{\amplitudeF}{$(1619 \pm 1)$ Hz}
@@ -61,38 +63,44 @@
 
 \begin{abstract}
 
-In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento
-in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer
-abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la
-frequenza \phaseF. È stato inoltre calcolato il valore atteso \theoryF \hspace{1pt}
-mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter.
-La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella
-ottenuta a partire dall'ampiezza no (per ora :( ).
+  In questo esperimento abbiamo ricreato un filtro crossover a due canali e ne abbiamo analizzato il comportamento
+  in risposta ad un'onda sinusoidale. Analizzando la variazione dell'ampiezza dei segnali sui canali Tweeter e Woofer
+  abbiamo ottenuto la frequenza di cross pari a \amplitudeF. Analizzando lo sfasamento relativo, abbiamo ottenuto la
+  frequenza \phaseF. È stato inoltre calcolato il valore atteso \theoryF \hspace{1pt}
+  mediante misura diretta dell'induttanza sul ramo del Woofer e della capacità sul ramo del Tweeter.
+  La frequenza ottenuta a partire dallo sfasamento è risultata compatibile con il valore teorico atteso, mentre quella
+  ottenuta a partire dall'ampiezza no (per ora :( ).
 
 \end{abstract}
 
+
 \section{Introduzione}\label{sec:introduzione}
 
-    \subfile{Sections/1-Introduzione.tex}
+  \subfile{Sections/1-Introduzione.tex}
+
 
 \section{Apparato sperimentale}\label{sec:apparato-sperimentale}
 
-    \subfile{Sections/2-Apparato_sperimentale.tex}
+  \subfile{Sections/2-Apparato_sperimentale.tex}
+
 
 \section{Analisi}\label{sec:analisi}
 
-    \subfile{Sections/3-Analisi.tex}
+  \subfile{Sections/3-Analisi.tex}
 
-\appendix
+
 
 \section*{Appendice}
+  \appendix
+
 
 \section{Formule e dimostrazioni}\label{sec:formule-e-dimostrazioni}
 
-    \subfile{Sections/A-Formule_e_dimostrazioni.tex}
+  \subfile{Sections/A-Formule_e_dimostrazioni.tex}
+
 
 \section{Correzione dettagliata errori sistematici}\label{sec:correzione-dettagliata-errori-sistematici}
 
-    \subfile{Sections/B-Correzione_dettagliata_errori_sistematici.tex}
+  \subfile{Sections/B-Correzione_dettagliata_errori_sistematici.tex}
 
 \end{document}
