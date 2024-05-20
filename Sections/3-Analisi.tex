@@ -124,11 +124,11 @@ $f_{cross}$ & $ 1437 \pm 2$ & Hz
 %ribadisco per chiarezza
 Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza, come descritto in sezione 2. 
 
-Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento temporale nell'inizio dell'acquisizione pari a $\tau_{aq}=1 \mu \mathrm{S}$, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore al valore vero.
+Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento temporale tra l'inizio delle due acquisizioni, che risulta essere pari a $\tau_{aq}=1 \mu \mathrm{S}$ secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore al valore vero.
 
-Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$ (si veda l'appendice per una spiegazione approfondita).
+Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$, dove $f$ rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
 
-In figura \ref{fig: phase_diff} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza. 
+In figura \ref{fig: phase_diff} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza. Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è coerente con il fatto che la fase del tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della fase si ripercuote su tutte le altre misure. Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i valori misurati sul canale Woofer. Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data frequenza poiché la fase del Woofer è in media 0.
 
 
 \end{document}
