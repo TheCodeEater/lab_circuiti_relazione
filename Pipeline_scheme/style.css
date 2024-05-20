@@ -1,0 +1,35 @@
+.main {
+    margin: 2cm;
+    border: solid black 4pt;
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.name {
+    font-size: 20pt;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    flex: 5 1 auto;
+}
+
+.inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: black solid 3pt;
+    margin: 1cm;
+    font-size: 16pt;
+    width: 5cm;
+    aspect-ratio: 1;
+}
+
+.label {
+    position: absolute;
+    font-size: 14pt;
+}
