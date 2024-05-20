@@ -23,11 +23,7 @@ jobs:
         with:
           root_file: Relazione_circuiti.tex
           latexmk_use_lualatex: true
-      - name: Recompile LaTeX document 
-        uses: xu-cheng/latex-action@v3
-        with:
-          root_file: Relazione_circuiti.tex
-          latexmk_use_lualatex: true
+
       - name: Upload PDF file
         uses: actions/upload-artifact@v4
         with:
