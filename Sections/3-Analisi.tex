@@ -81,11 +81,26 @@ Si osserva (Figura \ref{fig:signal_1600}) che, coerentemente con quanto atteso, 
 
 \end{subfigure}
 
-\caption{Sfasamento Tweeter-Woofer. La frequenza è in scala logaritmica. Le incertezze non sono visibili a causa della scala.}
+\caption{Fase del Tweeter misurata rispetto al Woofer (blu). Fase del Woofer  misurata rispetto se stesso (giallo). La frequenza è in scala logaritmica. Le incertezze non sono visibili a causa della scala.}
 \label{fig: phase_diff}
 
 \end{figure}
 
+La figura \ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer, che segue la relazione funzionale:
+
+  \begin{equation}
+    \label{eq:p_diff}
+    \phi_{diff} \; = \; \arctan(\frac{\omega L}{R}) + \arctan(\frac{1}{\omega RC})
+  \end{equation}
+
+  %Alla frequenza di cross la differenza di fase vale
+
+% \begin{equation}
+%    \label{eq:p_diff_cross}
+ %   \phi_{cross} \; = \; 2 \arctan(\frac{1}{R} \sqrt{\frac{L}{C}})
+%  \end{equation}
+  
+Effettuando un fit all'Eq (\ref{eq:p_diff})
 
 
 
