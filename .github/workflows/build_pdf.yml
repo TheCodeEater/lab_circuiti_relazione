@@ -32,4 +32,4 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: PDF
-          path: Relazione_circuit.pdf
+          path: Relazione_circuiti.pdf
