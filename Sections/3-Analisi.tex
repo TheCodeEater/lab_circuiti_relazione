@@ -86,22 +86,43 @@ Si osserva (Figura \ref{fig:signal_1600}) che, coerentemente con quanto atteso, 
 
 \end{figure}
 
-La figura \ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer, che segue la relazione funzionale:
+La figura \ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la relazione funzionale:
 
   \begin{equation}
     \label{eq:p_diff}
     \phi_{diff} \; = \; \arctan(\frac{\omega L}{R}) + \arctan(\frac{1}{\omega RC})
   \end{equation}
-
-  %Alla frequenza di cross la differenza di fase vale
-
-% \begin{equation}
-%    \label{eq:p_diff_cross}
- %   \phi_{cross} \; = \; 2 \arctan(\frac{1}{R} \sqrt{\frac{L}{C}})
-%  \end{equation}
   
-Effettuando un fit all'Eq (\ref{eq:p_diff})
+Tramite uno studio di funzione si può dimostrare che lo sfasamento relativo è massimo alla frequenza di cross e vale
 
+
+ \begin{equation}
+    \label{eq:p_diff_cross}
+    \phi_{cross} \; = \; 2 \arctan(\frac{1}{R} \sqrt{\frac{L}{C}})
+  \end{equation}
+
+  
+Effettuando un fit all'Eq (\ref{eq:p_diff}), abbiamo ricavato i valori L e C, considerando invece R come parametro costante poiché la frequenza di cross non dipende da esso.
+
+
+\begin{table}[H]
+\centering
+
+\begin{tabular}{c | c | c}
+%Heading
+Grandezza & Valore & Unità di misura \\
+\hline
+L & $ 11.82 \pm 0.03 $ & mH \\
+C & $ 1.037 \pm 0.002 $ & $\mathrm{\mu}$F \\
+$f_{cross}$ & $ 1437 \pm 2$ & Hz
+
+\end{tabular}
+\caption{Risultati del fit dell'Eq \ref{eq:p_diff}}
+\label{tab: fit_phase}
+
+\end{table}
+
+In figura \ref{fig: phase_diff} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo canale risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza. 
 
 
 \end{document}
