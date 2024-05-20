@@ -93,7 +93,7 @@ La figura \ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer
     \phi_{diff} \; = \; \arctan(\frac{\omega L}{R}) + \arctan(\frac{1}{\omega RC})
   \end{equation}
   
-Tramite uno studio di funzione si può dimostrare che lo sfasamento relativo è massimo alla frequenza di cross e vale
+Tramite uno studio di funzione si può dimostrare che lo sfasamento relativo è massimo alla frequenza di cross e vale:
 
 
  \begin{equation}
@@ -121,8 +121,14 @@ $f_{cross}$ & $ 1437 \pm 2$ & Hz
 \label{tab: fit_phase}
 
 \end{table}
+%ribadisco per chiarezza
+Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza, come descritto in sezione 2. 
 
-In figura \ref{fig: phase_diff} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo canale risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza. 
+Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento temporale nell'inizio dell'acquisizione pari a $\tau_{aq}=1 \mu \mathrm{S}$, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore al valore vero.
+
+Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$ (si veda l'appendice per una spiegazione approfondita).
+
+In figura \ref{fig: phase_diff} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza. 
 
 
 \end{document}
