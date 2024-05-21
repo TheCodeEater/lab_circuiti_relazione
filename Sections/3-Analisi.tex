@@ -61,11 +61,22 @@ Si osserva (Figura \ref{fig:signal_1600}) che, coerentemente con quanto atteso, 
 \begin{figure}[H]
 \centering
 
-\begin{subfigure}{=0.7\textwidth}
+\begin{subfigure}{=0.5\textwidth}
 
-\includegraphics[width=\textwidth]{cross.png}
+\includegraphics[width=\textwidth]{cross_dataonly.png}
+
+\caption{Andamenti sperimentali di Tweeter, Woofer e Vin (segnale in ingresso nel filtro, a valle della resistenza interna del generatore). Tensioni riferite al ground}
+\label{fig: amplitude_dataonly}
 
 \end{subfigure}
+
+\begin{subfigure}{=0.5\textwidth}
+
+    \includegraphics[width=\textwidth]{cross.png}
+
+    \caption{Andamenti sperimentali e fit dei guadagni in tensione. Si noti la discrepanza tra la frequenza di cross e il massimo del Vin}
+    
+    \end{subfigure}
 
 \caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica). A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una linea continua a causa dell'alta densità di punti.}
 \label{fig: cross_amplitude}
@@ -84,7 +95,8 @@ V_{woofer} = \frac{V_{in}}{\sqrt{R^2+(\omega L)^2}}
 V_{tweeter} = \frac{V_{in}}{\sqrt{R^2+(\frac{1}{\omega C})^2}}
 \end{equation}
 
-dove $V_{in}$ rappresenta la tensione in ingresso (assunta costante) pari a 0.65, osservata nel ramo Woofer nel limite di basse frequenze e nel ramo Tweeter nel limite di alte frequenze.
+dove $V_{in}$ rappresenta la tensione in ingresso. %(assunta costante) pari a 0.65, osservata nel ramo Woofer nel limite di basse frequenze e nel ramo Tweeter nel limite di alte frequenze.
+Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in figura \ref{fig: cross_}
 
 E' stato effettuato un fit ai parametri L e C (R assunta costante). Da essi è stata poi ricavata la frequenza di crossover secondo l'Eq. \ref{eq:f_cross}. 
 
