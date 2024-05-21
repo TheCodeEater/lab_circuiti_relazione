@@ -60,6 +60,46 @@
 
 \subsection{Analisi dell'ampiezza}
 
+\begin{figure}[H]
+\centering
+
+\begin{subfigure}{=0.7\textwidth}
+
+\includegraphics[width=\textwidth]{cross.png}
+
+\end{subfigure}
+
+\caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica). A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una linea continua a causa dell'alta densità di punti.}
+\label{fig: cross_amplitude}
+
+\end{figure}
+
+La figura \ref{fig: cross_amplitude} mostra l'andamento di ampiezza dei segnali filtrati in funzione della frequenza. 
+
+La relazione funzionale Ampiezza massima-Frequenza (misurata ai capi della resistenza di carico dei rami) è data da:
+
+\begin{equation}
+V_{woofer} = \frac{V_{in}}{\sqrt{R^2+(\omega L)^2}}
+\end{equation}
+
+\begin{equation}
+V_{tweeter} = \frac{V_{in}}{\sqrt{R^2+(\frac{1}{\omega C})^2}}
+\end{equation}
+
+dove $V_{in}$ rappresenta la tensione in ingresso (assunta costante) pari a 0.65, osservata nel ramo Woofer nel limite di basse frequenze e nel ramo Tweeter nel limite di alte frequenze.
+
+E' stato effettuato un fit ai parametri L e C (R assunta costante). Da essi è stata poi ricavata la frequenza di crossover secondo l'Eq. \ref{eq:f_cross}. 
+
+\begin{tabular}{c | c }
+
+%Heading
+Grandezza & Valore \\
+
+L & $(10.13 \pm 0.01)$ mH \\
+C & $(953.39 \pm 0.05)$ nF
+
+\end{tabular}
+
 \subsection{Analisi della fase}
 
 \end{document}
