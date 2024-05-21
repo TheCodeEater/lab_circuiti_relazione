@@ -8,23 +8,30 @@
 % Document
 \begin{document}
 
+Questo esperimento vuole verificare la validità delle formule teoriche su un filtro crossover reale. \\ \\
 Il filtro crossover è un circuito RLC costituito da due rami: uno con un filtro passa basso realizzato mediante un
-induttore e una resistenza in serie (ramo \textbf{Woofer}), l'altro con un filtro passa alto realizzato mediante
-condensatore e resistenza in serie (ramo \textbf{Tweeter}). Le due resistenze sono identiche a meno dell'incertezza.
+induttore (ramo \textbf{Woofer}), l'altro con un filtro passa alto costituito da un condensatore (ramo
+\textbf{Tweeter}).
 
 \begin{figure}[H]
   \centering
   \includegraphics[width=8cm]{Schema_crossover.png}
 
-  \caption{Schema del circuito}
+  \caption{Schema del circuito realizzato}
   \label{fig:schema_circuito}
 
 \end{figure}
 
-In risposta ad un segnale oscillante in ingresso, questo è attenuato in ampiezza dal ramo Woofer se a frequenza superiore ad una particolare frequenza (detta \textit{frequenza di crossover}),
-attenuato dal ramo Tweeter se inferiore. 
-Detta frequenza dipende dalla caratteristiche del circuito. Formalmente si definisce frequenza di crossover $f_{cross}$ la
-frequenza a cui l'ampiezza dei segnali sui due canali è uguale e si dimostra che vale:
+Le due resistenze nella Fig. \ref{fig:schema_circuito} simulano degli altoparlanti (da qui i nomi dei rami), e sono da
+considerarsi uguali a meno delle incertezze.
+
+Le componenti di un segnale oscillante in ingresso, vengono scalate in ampiezza sui rami del circuito in base alla loro
+frequenza.
+Il ramo del \textit{woofer} presenta un'attenuazione progressiva delle componenti ad alta frequenza, mentre il ramo
+del \textit{tweeter} di quelle a bassa.\\
+La frequenza alla quale un segnale è ripartito in egual modo sui due rami è detta \textit{frequenza di cross} e dipende
+dai valori della capacità e dell'induttanza del circuito.
+Per calcolarla basta eguagliare le impedenze dei due rami, e si ottiene facilmente:
 
 \begin{equation}
   \label{eq:f_cross}
@@ -33,7 +40,7 @@ frequenza a cui l'ampiezza dei segnali sui due canali è uguale e si dimostra ch
 
 dove $L$ è l'induttanza della bobina sul ramo Woofer e $C$ la capacità del condensatore sul ramo Tweeter.
 
-Si ha inoltre, sempre alla suddetta frequenza, uno sfasamento dei due rami rispetto al generatore uguale e opposto: il
+Sempre alla frequenza di cross, si ha anche uno sfasamento dei due rami rispetto al generatore uguale e opposto: il
 Woofer anticipa, il Tweeter ritarda.
 
 \begin{align}
@@ -41,8 +48,8 @@ Woofer anticipa, il Tweeter ritarda.
   \phi_{tweeter} &= \arctan(\frac{1}{\omega RC}) \label{eq:p_tweeter}
 \end{align}
 
-dove $L$ e $C$ sono definiti come nell'Eq. \eqref{eq:f_cross}, $\omega$ è la pulsazione dell'onda in ingresso, $R$ la resistenza
-(identica su entrambi i rami).
+dove $L$ e $C$ sono definiti come nell'Eq. \eqref{eq:f_cross}, $\omega$ è la pulsazione dell'onda in ingresso e $R$ il
+valore delle resistenze sui due rami.
 
 
 \end{document}
