@@ -28,6 +28,14 @@
 
 \usepackage{subfiles} % Best loaded last in the preamble
 
+% Imposto la path giusta per i font e le immagini
+\ifSubfilesClassLoaded{ % Se sto compilando un subfile
+  \fontspec[Path=../Fonts/, UprightFont=*, BoldFont=*b, ItalicFont=*i]{calibri.ttf}
+} { % Se sto compilando il main
+  \fontspec[Path=Fonts/, UprightFont=*, BoldFont=*b, ItalicFont=*i]{calibri.ttf}
+}
+
+
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
 \definecolor{codepurple}{rgb}{0.58,0,0.82}
@@ -52,20 +60,19 @@
   tabsize=2
 }
 
+% Some definitions
+\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequatio}}
+% usage: https://tex.stackexchange.com/questions/42726/align-but-show-one-equation-number-at-the-end
+
 % Come dice Giorgia: bisogna parlare in italiano!!
 \renewcommand{\figurename}{Figura}
 \renewcommand{\tablename}{Tabella}
 
-\begin{document}
-
-% Some definitions
-
-\newcommand{\numberthis}{\addtocounter{equation}{1}\tag{\theequatio}}
-% usage: https://tex.stackexchange.com/questions/42726/align-but-show-one-equation-number-at-the-end
-
 \newcommand{\theoryF}{ $(1444 \pm 10)$ Hz}
 \newcommand{\amplitudeF}{$(1619 \pm 1)$ Hz}
 \newcommand{\phaseF}{$(1437 \pm 2)$ Hz}
+
+\begin{document}
 
 \maketitle
 
