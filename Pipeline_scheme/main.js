@@ -13,10 +13,10 @@ function canvas_arrow(context, fromx, fromy, tox, toy) {
 ctx = document.getElementById("c").getContext("2d");
 ctx.beginPath();
 canvas_arrow(ctx, 313, 260, 550, 260);
-canvas_arrow(ctx, 650, 345, 650, 420);
-canvas_arrow(ctx, 650, 617, 650, 692);
+canvas_arrow(ctx, 650, 345, 650, 413);
+canvas_arrow(ctx, 650, 610, 650, 673);
 canvas_arrow(ctx, 552, 730, 315, 350);
-canvas_arrow(ctx, 170, 412, 170, 625);
+canvas_arrow(ctx, 170, 412, 170, 608);
 ctx.stroke();
 
 

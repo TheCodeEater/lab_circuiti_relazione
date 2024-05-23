@@ -6,7 +6,10 @@
 }
 
 .name {
-    font-size: 20pt;
+    font-size: 25pt;
+    text-align: center;
+    margin: 5pt 0 0 5pt;
+    font-weight: bold;
 }
 
 .wrapper {
@@ -24,12 +27,13 @@
     text-align: center;
     border: black solid 3pt;
     margin: 1cm;
-    font-size: 16pt;
+    margin-top: 0.7cm;
+    font-size: 23pt;
     width: 5cm;
     aspect-ratio: 1;
 }
 
 .label {
     position: absolute;
-    font-size: 14pt;
+    font-size: 20pt;
 }
