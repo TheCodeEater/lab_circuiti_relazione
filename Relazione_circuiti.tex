@@ -15,7 +15,6 @@
 \usepackage{subcaption}
 
 \usepackage{fontspec}
-\fontspec[Path=Fonts/, UprightFont=*, BoldFont=*b, ItalicFont=*i]{calibri.ttf}
 
 
 \usepackage{graphicx}
@@ -27,6 +26,13 @@
 \usepackage{amsmath}
 
 \usepackage{subfiles} % Best loaded last in the preamble
+
+% Imposto la path giusta per i font e le immagini
+\ifSubfilesClassLoaded{ % Se sto compilando un subfile
+  \fontspec[Path=../Fonts/, UprightFont=*, BoldFont=*b, ItalicFont=*i]{calibri.ttf}
+} { % Se sto compilando il main
+  \fontspec[Path=Fonts/, UprightFont=*, BoldFont=*b, ItalicFont=*i]{calibri.ttf}
+}
 
 \definecolor{codegreen}{rgb}{0,0.6,0}
 \definecolor{codegray}{rgb}{0.5,0.5,0.5}
