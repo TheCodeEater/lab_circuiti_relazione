@@ -8,19 +8,18 @@
 % Document
 \begin{document}
 
-Questo esperimento vuole verificare la validità delle formule teoriche su un filtro crossover reale. \\ \\
+Questo esperimento vuole verificare la validità delle formule teoriche su un filtro crossover reale.
+
+\begin{wrapfigure}{r}{7.5cm}
+  \centering
+  \includegraphics[width=7cm]{Schema_crossover.png}
+  \caption{Schema del circuito realizzato}
+  \label{fig:schema_circuito}
+\end{wrapfigure}
+
 Il filtro crossover è un circuito RLC costituito da due rami: uno con un filtro passa basso realizzato mediante un
 induttore (ramo \textbf{Woofer}), l'altro con un filtro passa alto costituito da un condensatore (ramo
 \textbf{Tweeter}).
-
-\begin{figure}[H]
-  \centering
-  \includegraphics[width=8cm]{Schema_crossover.png}
-
-  \caption{Schema del circuito realizzato}
-  \label{fig:schema_circuito}
-
-\end{figure}
 
 Le due resistenze (tal volta dette \textit{resistenze di carico}) nella Fig.\,\ref{fig:schema_circuito} simulano degli
 altoparlanti (da qui i nomi dei rami), e sono da considerarsi uguali a meno delle incertezze.
@@ -28,7 +27,8 @@ altoparlanti (da qui i nomi dei rami), e sono da considerarsi uguali a meno dell
 Le componenti di un segnale oscillante in ingresso, vengono scalate in ampiezza sui rami del circuito in base alla loro
 frequenza.
 Il ramo del \textit{woofer} presenta un'attenuazione progressiva delle componenti ad alta frequenza, mentre il ramo
-del \textit{tweeter} di quelle a bassa.\\
+del \textit{tweeter} di quelle a bassa.
+
 La frequenza alla quale un segnale è ripartito in egual modo sui due rami è detta \textit{frequenza di cross} e dipende
 dai valori della capacità e dell'induttanza del circuito.
 Per calcolarla basta eguagliare le impedenze dei due rami, e si ottiene facilmente:
