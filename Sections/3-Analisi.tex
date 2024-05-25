@@ -55,7 +55,7 @@
   pressi di $f_{cross}$.
   A basse frequenze si osserva (Fig. \ref{fig:signal_500}) un'attenuazione del 60\% dell'ampiezza sul ramo Tweeter e
   nessuna alterazione sul Woofer, ad alte frequenze un'attenuazione sul Woofer dell'86\% e nessuna sul Tweeter (Fig.
-  \ref{fig:signal_17k}).
+  \ref{fig:signal_17k}). Questa prima analisi qualitativa è in accordo con la teoria.
 
 \subsection{Analisi della frequenza misurata}
 
@@ -69,7 +69,7 @@
       \includegraphics[width=\textwidth]{cross_dataonly.png}
 
       \caption{Andamenti sperimentali di Tweeter, Woofer e Vin (segnale in ingresso nel filtro,
-        a valle della resistenza interna del generatore). Tensioni riferite al ground}
+        a valle della resistenza interna del generatore).}
       \label{fig: amplitude_dataonly}
 
     \end{subfigure}
@@ -79,13 +79,11 @@
       \includegraphics[width=\textwidth]{cross_gain_amplitude.png}
 
       \caption
-      {Andamenti sperimentali e fit dei guadagni in tensione. Si noti la discrepanza tra la frequenza di cross e il
-      massimo del Vin}
+      {Andamenti sperimentali e fit dei guadagni in tensione.}
       \label{fig:cross_gain}
     \end{subfigure}
 
-    \caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica)
-      . A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una
+    \caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica). A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una
       linea continua a causa dell'alta densità di punti.}
     \label{fig:cross_amplitude}
 
@@ -98,9 +96,9 @@
   Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in Fig.
   \ref{fig: amplitude_dataonly}, la $V_{in}$
   dipende dalla frequenza ed assumerla costante potrebbe introdurre errori.
-  Pertanto abbiamo calcolato i guadagni in tensione (Fig. \ref{fig:cross_gain}
+  Pertanto abbiamo determinato i guadagni in tensione (Fig. \ref{fig:cross_gain}
   ) dividendo le ampiezze osservate per il valore di $V_{in}$
-  osservato alla relativa frequenza, propagando le incertezze in quadratura.
+  osservato alla relativa frequenza, propagando le incertezze in quadratura. Gli andamenti seguiti da queste funzioni sono: 
 
   \begin{equation}
     \label{eq:gain_woofer}
@@ -130,7 +128,8 @@
       Grandezza & Valore                 \\
 
       L         & $(10.13 \pm 0.01)$ mH  \\
-      C         & $(953.39 \pm 0.05)$ nF
+      C         & $(953.39 \pm 0.05)$ nF \\
+      $f_{cross}$ & $(1619 \pm 2)$ Hz
 
     \end{tabular}
 
@@ -142,11 +141,11 @@
   La Tab. \ref{tab:fit_amplitude} mostra i risultati del fit.
   Si osserva che la frequenza ottenuta non risulta compatibile con il valore teorico stimato \theoryF.
   Tuttavia, l'andamento della curva $V_{in}$ ci fornisce un metodo ulteriore per determinare la frequenza di cross.
-  Infatti, a tale frequenza, si dimostra che l'impedenza totale del filtro è massima.
+  Infatti, si dimostra che a tale frequenza l'impedenza totale del filtro è massima.
   Usando la legge di Ohm simbolica, ne segue che la tensione ai capi del filtro deve essere massima.
   Cercando il massimo della curva sperimentale, otteniamo il valore $(1434 \pm 8) \;$ Hz.
   L'incertezza è stata determinata considerando metà del passo di scansione utilizzato nei pressi di quella frequenza
-  (come descritto in sezione 2, non è costante).
+  (come descritto in sezione 2, non è costante). Risulta pertanto essere un'incertezza massima.
 
 \subsection{Analisi della fase}
 
