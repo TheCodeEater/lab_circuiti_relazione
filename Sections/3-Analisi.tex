@@ -184,9 +184,32 @@
   La Fig.\,\ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la
   relazione definita dall'Eq.\,\eqref{eq:p_diff}.
   La Fig.\,\ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura).
+  Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza,
+  come descritto in sezione 2.  
+  
+Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui
+  canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento
+  temporale tra l'inizio delle due acquisizioni, che risulta essere pari a $\tau_{aq}=1 \mu \mathrm{S}$
+      secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore
+      al valore vero.
+
+      Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$, dove $f$
+      rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
+
+      In Fig.\,\ref{fig: phase_diff}
+      si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo
+      canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni
+      aumenta all'aumentare della frequenza. Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è
+      coerente con il fatto che la fase del tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della
+      fase si ripercuote su tutte le altre misure. Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i
+      valori misurati sul canale Woofer. Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data
+      frequenza poiché la fase del Woofer è in media 0.  
+  
+  
   Effettuando un fit con l'Eq.\,\eqref{eq:p_diff}, fissando $R$
       poiché la frequenza di cross non dipende da esso, abbiamo
       ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff_cross} abbiamo stimato la frequenza di cross.
+
 
 
   \begin{table}[H]
@@ -207,26 +230,10 @@ $\chi^2$ & $49.62$
 
   \end{table}
 %ribadisco per chiarezza
-  Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza,
-  come descritto in sezione 2.
 
-  Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui
-  canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento
-  temporale tra l'inizio delle due acquisizioni, che risulta essere pari a $\tau_{aq}=1 \mu \mathrm{S}$
-      secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore
-      al valore vero.
 
-      Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$, dove $f$
-      rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
-
-      In Fig.\,\ref{fig: phase_diff}
-      si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo
-      canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni
-      aumenta all'aumentare della frequenza. Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è
-      coerente con il fatto che la fase del tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della
-      fase si ripercuote su tutte le altre misure. Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i
-      valori misurati sul canale Woofer. Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data
-      frequenza poiché la fase del Woofer è in media 0.
+%discussione fit
+Il valore ottenuto è risultato compatibile con il valore teorico atteso \theoryF. La stima mediante analisi della fase risulta tuttavia più precisa, dato che presenta un'incertezza percentuale del 0.14\% contro lo 0.69\% del valore teorico. Il $\chi^2$ ottenuto risulta molto maggiore del valore ottimale pari a 1. In effetti, il fit si discosta in maniera significativa dai dati a basse frequenze, risultando tuttavia più accurato nei pressi della frequenza di cross e ad alte frequenze.
 
 
 \end{document}
