@@ -57,10 +57,8 @@
   Si osserva (Fig.\,\ref{fig:signal_1600}) che, coerentemente con quanto atteso, i segnali hanno ampiezza simile nei
   pressi di $f_{cross}$.
   A basse frequenze si osserva (Fig.\,\ref{fig:signal_500}) un'attenuazione del 60\% dell'ampiezza sul ramo Tweeter e
-  nessuna alterazione sul Woofer, ad alte frequenze un'attenuazione sul Woofer dell'86\% e nessuna sul Tweeter (Fig.
-  \,\ref{fig:signal_17k}). Questa prima analisi qualitativa è in accordo con la teoria.
-
-\subsection{Analisi della frequenza misurata}
+  nessuna alterazione sul Woofer, ad alte frequenze un'attenuazione sul Woofer dell'86\% e nessuna sul Tweeter
+  (Fig.\,\ref{fig:signal_17k}). Questa prima analisi qualitativa è in accordo con la teoria.
 
 \subsection{Analisi dell'ampiezza}
 
@@ -89,6 +87,7 @@
     \caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica)
       . A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una
       linea continua a causa dell'alta densità di punti.}
+
     \label{fig:cross_amplitude}
 
   \end{figure}
@@ -97,22 +96,24 @@
 
   La relazione funzionale Ampiezza massima-Frequenza (misurata ai capi della resistenza di carico dei rami) dipende
   dalla tensione in ingresso sul filtro $V_{in}$.
-  Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in Fig.
-  \,\ref{fig: amplitude_dataonly}, la $V_{in}$
+
+  Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in
+  Fig.\,\ref{fig: amplitude_dataonly}, la $V_{in}$
   dipende dalla frequenza ed assumerla costante potrebbe introdurre errori.
-  Pertanto abbiamo determinato i guadagni in tensione (Fig.\,\ref{fig:cross_gain}
-  ) dividendo le ampiezze osservate per il valore di $V_{in}$
-  osservato alla relativa frequenza, propagando le incertezze in quadratura. Gli andamenti seguiti da queste funzioni
-  sono:
+  Pertanto abbiamo determinato i guadagni in tensione (Fig.\,\ref{fig:cross_gain}) dividendo le ampiezze osservate per
+  il valore di $V_{in}$
+  osservato alla relativa frequenza, propagando le incertezze in quadratura (poiché casuali).
+  Gli andamenti seguiti da queste funzioni sono:
+
 
   \begin{equation}
     \label{eq:gain_woofer}
-    G_{woofer} = \frac{1}{\sqrt{R^2+(\omega L)^2}}
+    G_{woofer} = \frac{R}{\sqrt{R^2+(\omega L)^2}}
   \end{equation}
 
   \begin{equation}
     \label{eq:gain_tweeter}
-    G_{tweeter} = \frac{1}{\sqrt{R^2+(\frac{1}{\omega C})^2}}
+    G_{tweeter} = \frac{R}{\sqrt{R^2+(\frac{1}{\omega C})^2}}
   \end{equation}
 
 %dove $V_{in}$ rappresenta la tensione in ingresso. %(assunta costante) pari a 0.65, osservata nel ramo Woofer nel
@@ -120,6 +121,11 @@
 
 %Le funzioni guadagno si ottengono semplicemente dividendo le eq date per vin (NOTA: da riscrivere, non voglio
 %    duplicare le equazioni)
+
+  Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla forma d'onda osservata come descritto in
+  sezione\,\ref{sec:apparato-sperimentale}.
+  Ad essa è stata aggiunta l'incertezza strumentale sulla misura delle tensioni secondo le specifiche di ELVIS, poiché
+  quelle ottenute da fit sono risultate minori di quanto lo strumento è in grado di risolvere.%DA VERIFICARE BENE
 
   È stato effettuato un fit ai parametri $L$ e $C$ ($R$ fissata).
   Da essi è stata poi ricavata la frequenza di crossover secondo l'Eq.\,\eqref{eq:f_cross}.
@@ -130,17 +136,17 @@
     \begin{tabular}{c | c }
 
       %Heading
-      Grandezza          & Valore                 \\
+      Grandezza                      & Valore                 \\
 
-      L                  & $(10.13 \pm 0.01)$ mH  \\
-      C                  & $(953.39 \pm 0.05)$ nF \\
-      $f_{cross}$        & $(1619 \pm 2)$ Hz      \\
-      $\chi^2_{woofer}$  & 15755.73               \\
-      $\chi^2_{tweeter}$ & 19483.52
+      L                              & $(10.52 \pm 0.01)$ mH  \\
+      C                              & $(919.79 \pm 0.05)$ nF \\
+      $f_{cross}$                    & \amplitudeF            \\
+      $\widetilde{\chi}^2_{woofer}$  & 3.01                   \\
+      $\widetilde{\chi}^2_{tweeter}$ & 0.89
 
     \end{tabular}
 
-    \caption{Risultati del fit alle funzioni guadagno in tensione}
+    \caption{Risultati del fit alle funzioni guadagno in tensione. Le incertezze sono di tipo casuale.}
     \label{tab:fit_amplitude}
 
   \end{table}
@@ -150,9 +156,41 @@
   Tuttavia, l'andamento della curva $V_{in}$ ci fornisce un metodo ulteriore per determinare la frequenza di cross.
   Infatti, si dimostra che a tale frequenza l'impedenza totale del filtro è massima.
   Usando la legge di Ohm simbolica, ne segue che la tensione ai capi del filtro deve essere massima.
-  Cercando il massimo della curva sperimentale, otteniamo il valore $(1434 \pm 8) \;$ Hz.
+  Cercando il massimo della curva sperimentale, otteniamo il valore $(1434 \pm 8)$~Hz, che risulta compatibile con il
+  valore teorico stimato.
   L'incertezza è stata determinata considerando metà del passo di scansione utilizzato nei pressi di quella frequenza
-  (come descritto in sezione 2, non è costante). Risulta pertanto essere un'incertezza massima.
+  (come descritto in sezione 2, non è costante).
+  Risulta pertanto essere un'incertezza massima.
+
+  %discussione del non venuto
+  \begin{figure}[H]
+    \centering
+
+    \centering
+    \includegraphics[width=.50\textwidth]{cross_reduced_range.png}
+    \caption{Fit funzioni guadagno. Zoom nei pressi della frequenza di crossover.}
+    \label{fig: amp_gain_fit_reduced}
+
+
+  \end{figure}
+
+  La Fig.\,\ref{fig: amp_gain_fit_reduced} mostra gli andamenti del fit e dei valori sperimentali nei pressi della
+  frequenza di crossover.
+  Riguardo alla curva del Woofer, si può notare come questa si discosti oltre l'incertezza dai rispettivi dati a
+  frequenze inferiori a quella di cross ottenuta mediante questo metodo (peraltro non compatibile con quella teorica).
+  %questo è da rivedere
+
+  A frequenze superiori, si osserva un progressivo riavvicinamento delle due curve.
+  Una situazione analoga ma meno marcata si ha sulla curva del Tweeter.
+  I valori di $\chi^2$
+  ottenuti suggeriscono un andamento simile (cercare termine migliore) tra curva e dati (si, forse è
+  contraddizione, ho sonno) e graficamente si osserva come l'intersezione tra le curve sperimentali e dei fit siano
+  pressoché nello stesso valore.
+  Pertanto, la stima risulta precisa ma non accurata poiché il cross risulta traslato rispetto alla predizione teorica
+  (inserire immagine).
+  Si può supporre che vi siano effetti reali che traslano sistematicamente il cross, i quali non sono tenuti in
+  considerazione dal modello teorico, che pertanto risulta inaccurato per quanto riguarda la stima dell'ampiezza del
+  segnale (un grafico di confronto con le stime teoriche aiuterà un botto) %prob da mettere nelle conslusioni
 
 \subsection{Analisi della fase}
 
@@ -184,6 +222,7 @@
   \end{figure}
 
   La Fig.\,\ref{fig:pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la
+
   relazione definita dall'Eq.\,\eqref{eq:p_diff}.
   Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza,
   come descritto nella sezione~\ref{sec:apparato-sperimentale}.
@@ -213,7 +252,6 @@
   Effettuando un fit con l'Eq.\,\eqref{eq:p_diff}, fissando $R$
   poiché la frequenza di cross non dipende da esso, abbiamo
   ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff_cross} abbiamo stimato la frequenza di cross.
-
 
 
   \begin{table}[H]
