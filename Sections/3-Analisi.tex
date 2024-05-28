@@ -132,11 +132,11 @@
 
       %Heading
       Grandezza                      & Valore                 \\
-
-      L                              & $(10.45 \pm 0.01)$ mH  \\
-      C                              & $(921.46 \pm 0.05)$ nF \\
+      \hline
+      $L$                            & $(10.45 \pm 0.01)$ mH  \\
+      $C$                            & $(921.46 \pm 0.05)$ nF \\
       $f_{cross}$                    & \amplitudeF            \\
-      $\widetilde{\chi}^2_{woofer}$  & 5458.67                   \\
+      $\widetilde{\chi}^2_{woofer}$  & 5458.67                \\
       $\widetilde{\chi}^2_{tweeter}$ & 2288.34
 
     \end{tabular}
@@ -162,34 +162,39 @@
     \centering
 
     \begin{subfigure}[t]{=0.49\textwidth}
-        \includegraphics[width=\textwidth]{cross_reduced_range.png}
-        \caption{Confronto dati e fit.}
-        \label{fig: amp_gain_fit_data_reduced}
+      \includegraphics[width=\textwidth]{cross_reduced_range.png}
+      \caption{Confronto dati e fit.}
+      \label{fig: amp_gain_fit_data_reduced}
 
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{=0.49\textwidth}
-        \includegraphics[width=\textwidth]{cross_reduced_range_theoric.png}
-    	\caption{Confronto dati, fit e previsione teorica. Si noti la traslazione del cross tra teoria e dati.}
-    	\label{fig: amp_gain_fit_theoric_reduced}
+      \includegraphics[width=\textwidth]{cross_reduced_range_theoric.png}
+      \caption{Confronto dati, fit e previsione teorica. Si noti la traslazione del cross tra teoria e dati.}
+      \label{fig: amp_gain_fit_theoric_reduced}
     \end{subfigure}
 
-    	\caption{Fit funzioni guadagno. Zoom nei pressi della frequenza di crossover. 		Incertezze non visibili a causa della scala.}
-    	\label{fig: amp_gain_fit_reduced}
+    \caption
+    {Fit funzioni guadagno. Zoom nei pressi della frequenza di crossover. Incertezze non visibili a causa della scala.}
+    \label{fig: amp_gain_fit_reduced}
 
 
   \end{figure}
 
-  La Fig.\,\ref{fig: amp_gain_fit_reduced} mostra gli andamenti del fit e dei valori sperimentali nei pressi della frequenza di crossover.
-  Riguardo alla curva del Woofer, si può notare come questa si discosti oltre l'incertezza dai rispettivi dati a frequenze inferiori alla frequenza di cross, per poi diminuire la distanza da essi a frequenze superiori.
+  La Fig.\,\ref{fig: amp_gain_fit_reduced}
+  mostra gli andamenti del fit e dei valori sperimentali nei pressi della frequenza di crossover.
+  Riguardo alla curva del Woofer, si può notare come questa si discosti oltre l'incertezza dai rispettivi dati a
+  frequenze inferiori alla frequenza di cross, per poi diminuire la distanza da essi a frequenze superiori.
 
-  Una situazione analoga, sebbene meno marcata, si osserva sulla curva del Tweeter, dove la curva del fit, entro le incertezze a frequenza inferiori al cross, si discosta progressivamente dai dati reali a frequenze superiori.
-  Questa discrepanza è evidente nel valore del $\chi^2$, nell'ordine di $10^3$, molto maggiore al valore ottimale pari a 1. 
-  Tuttavia, le incertezze ottenute sono mediamente 4 ordini di grandezza inferiori ai dati. E' plausibile che queste abbiano portato ad un valore eccessivamente elevato del $\chi^2$.
-  
-  Ciononostante, si osserva, seppur traslata, l'intersezione tra le due curve sperimentali. Il cross è avvenuto come da predizione teorica, ma risulta traslato di circa 183 Hz.
-  
- 
+  Una situazione analoga, sebbene meno marcata, si osserva sulla curva del Tweeter, dove la curva del fit, entro le
+  incertezze a frequenza inferiori al cross, si discosta progressivamente dai dati reali a frequenze superiori.
+  Questa discrepanza è evidente nel valore del $\chi^2$, nell'ordine di $10^3$
+  , molto maggiore al valore ottimale pari a 1.
+  Tuttavia, le incertezze ottenute sono mediamente 4 ordini di grandezza inferiori ai dati. E' plausibile che queste
+  abbiano portato ad un valore eccessivamente elevato del $\chi^2$.
+
+  Ciononostante, si osserva, seppur traslata, l'intersezione tra le due curve sperimentali. Il cross è avvenuto come da
+  predizione teorica, ma risulta traslato di circa 183 Hz.
 
 \subsection{Analisi della fase}
 
@@ -251,7 +256,6 @@
   Effettuando un fit con l'Eq.\,\eqref{eq:p_diff}, fissando $R$
   poiché la frequenza di cross non dipende da esso, abbiamo
   ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff} abbiamo stimato la frequenza di cross.
-
 
   \begin{table}[H]
     \centering
