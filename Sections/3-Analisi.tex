@@ -198,16 +198,18 @@
   Questo è stato corretto aggiungendo alla fase misurata $ 2 \pi \nu \cdot \tau_{aq}$, dove $\nu$
   rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
 
-      In Fig.\,\ref{fig: phase_diff}
-      si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo
-      canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni
-      aumenta all'aumentare della frequenza. Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è
-      coerente con il fatto che la fase del tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della
-      fase si ripercuote su tutte le altre misure. Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i
-      valori misurati sul canale Woofer. Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data
-      frequenza poiché la fase del Woofer è in media 0.  
-  
-  
+  In Fig.\,\ref{fig:pdiff_dataonly} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0
+  poiché il trigger è sul medesimo canale, risulta in realtà non nulla ma oscillante attorno a questo valore e che
+  l'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza.
+  Ciò è probabilmente dovuto al trigger della ELVIS, che non azionando al momento esatto l'acquisizione ha introdotto
+  una fase sul canale del woofer, che come per il multiplexer dipende dalla frequenza dell'onda acquisita.
+  Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è coerente con il fatto che la fase del
+  tweeter è misurata relativamente al Woofer, e quindi una fluttuazione attorno allo 0 della fase si ripercuote su tutte
+  le altre misure.
+  Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i valori misurati sul canale Woofer.
+  Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data frequenza poiché la fase del Woofer è
+  in media 0.
+
   Effettuando un fit con l'Eq.\,\eqref{eq:p_diff}, fissando $R$
   poiché la frequenza di cross non dipende da esso, abbiamo
   ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff_cross} abbiamo stimato la frequenza di cross.
