@@ -46,10 +46,44 @@
   \end{equation*}
   dove $ddp$ è la differenza di potenziale richiesta al generatore. \\
 
-  \begin{wraptable}{r}{0.5\textwidth}
-    \centering
-    \begin{minipage}{0.43\textwidth}
+%  \begin{wraptable}{r}{0.5\textwidth}
+%    \centering
+%    \begin{minipage}{0.43\textwidth}
+%
+%      \centering
+%      \begin{tabular}{|c|c|}
+%        % Par name & Par val
+%        \hline
+%        Sample per buffer & 3000                           \\
+%        Sample al secondo & $ 450 \cdot 10^3 $                 \\
+%        Range             & 200 Hz − 10 kHz                \\
+%        Passo             & $\nu_{i+1} = \nu_i \cdot 1.01$ \\ \hline
+%      \end{tabular}
+%
+%      \captionof{table}{Parametri per acquisizioni bufferizate}
+%      \label{tab:parametri-daq}
+%
+%    \end{minipage}
+%
+%  \end{wraptable}
 
+%  Abbiamo poi impostato l'acquisizione dati
+%  a 3000~sample a $ 450 \cdot 10^3 $~sample/s su un range da 200~Hz a
+%  20~kHz, con un passo tale da essere costante in scala logaritmica (ovvero $ \nu_{i+1} = \nu_i \cdot 1.01 $),
+  
+  \begin{minipage}{0.49\textwidth}
+    Abbiamo poi impostato l'acquisizione dati come in Tab\,\ref{tab:parametri-daq} e con questi parametri abbiamo
+    misurato:
+    \begin{itemize}
+      \item La differenza di potenziale tra il generatore e il ground
+      \item La caduta di potenziale sulle resistenze di carico
+    \end{itemize}
+
+  \end{minipage} \hfill
+  \begin{minipage}{0.49\textwidth}
+
+    \centering
+    \begin{minipage}{0.85\textwidth}
       \centering
       \begin{tabular}{|c|c|}
         % Par name & Par val
@@ -62,25 +96,16 @@
 
       \captionof{table}{Parametri per acquisizioni bufferizate}
       \label{tab:parametri-daq}
-
     \end{minipage}
 
-  \end{wraptable}
-
-%  Abbiamo poi impostato l'acquisizione dati
-%  a 3000~sample a $ 450 \cdot 10^3 $~sample/s su un range da 200~Hz a
-%  20~kHz, con un passo tale da essere costante in scala logaritmica (ovvero $ \nu_{i+1} = \nu_i \cdot 1.01 $),
-  Abbiamo poi impostato l'acquisizione dati come in Tab\,\ref{tab:parametri-daq} e con questi parametri abbiamo
-  misurato:
-  \begin{itemize}
-    \item La differenza di potenziale tra il generatore e il ground
-    \item La caduta di potenziale sulle resistenze di carico
-  \end{itemize}
+  \end{minipage} \\
 
   Da questi dati abbiamo estratto con un fit della forma $ A \sin\left( \omega t + \phi \right) $ i valori di ampiezza e
   fase (come frequenza abbiamo usato quella del function generator, nota con un'incertezza assoluta di 0.186 Hz), che
   abbiamo utilizzato nella fase di analisi (Si veda la Fig.\,\ref{fig:schema_pipeline} per uno schema del processo
   descritto)
+  
+
 
 %  Abbiamo poi misurato l'ampiezza del segnale su entrambi i canali in funzione della frequenza, riferita al ground del
 %  circuito.
