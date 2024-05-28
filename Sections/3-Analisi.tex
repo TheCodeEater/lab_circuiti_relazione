@@ -52,14 +52,13 @@
   La Fig.\,\ref{fig:signal_waveforms} mostra la forma d'onda dei segnali osservati sui rami Woofer e Tweeter in risposta
   ad un segnale sinusoidale.
   La Fig.\,\ref{fig:signal_1600} mostra il comportamento nei pressi della frequenza di cross attesa, la Fig.
- \,\ref{fig:signal_500} a 1/3 e la Fig.\,\ref{fig:signal_17k} a circa 10 volte.
+  \,\ref{fig:signal_500} a 1/3 e la Fig.\,\ref{fig:signal_17k} a circa 10 volte.
 
   Si osserva (Fig.\,\ref{fig:signal_1600}) che, coerentemente con quanto atteso, i segnali hanno ampiezza simile nei
   pressi di $f_{cross}$.
   A basse frequenze si osserva (Fig.\,\ref{fig:signal_500}) un'attenuazione del 60\% dell'ampiezza sul ramo Tweeter e
-  nessuna alterazione sul Woofer, ad alte frequenze un'attenuazione sul Woofer dell'86\% e nessuna sul Tweeter (Fig.
- \,\ref{fig:signal_17k}). Questa prima analisi qualitativa è in accordo con la teoria.
-
+  nessuna alterazione sul Woofer, ad alte frequenze un'attenuazione sul Woofer dell'86\% e nessuna sul Tweeter
+  (Fig.\,\ref{fig:signal_17k}). Questa prima analisi qualitativa è in accordo con la teoria.
 
 \subsection{Analisi dell'ampiezza}
 
@@ -85,8 +84,12 @@
       \label{fig:cross_gain}
     \end{subfigure}
 
-    \caption{Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica). A causa della scala le incertezze sulle singole misure non sono visibili. L'andamento è rappresentato da una
-      linea continua a causa dell'alta densità di punti.}
+    \caption{
+      Ampiezza misurata in funzione della frequenza (asse della frequenza in scala logaritmica).
+      % A causa della scala le incertezze sulle singole misure non sono visibili. % Non è vero, semplicemente non ci
+      % sono
+      L'andamento è rappresentato da una linea continua a causa dell'alta densità di punti.
+    }
     \label{fig:cross_amplitude}
 
   \end{figure}
@@ -95,12 +98,13 @@
 
   La relazione funzionale Ampiezza massima-Frequenza (misurata ai capi della resistenza di carico dei rami) dipende
   dalla tensione in ingresso sul filtro $V_{in}$.
-  Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in Fig.
- \,\ref{fig: amplitude_dataonly}, la $V_{in}$
+  Tuttavia, a causa della presenza della resistenza interna nel generatore e come visibile in
+  Fig.\,\ref{fig: amplitude_dataonly}, la $V_{in}$
   dipende dalla frequenza ed assumerla costante potrebbe introdurre errori.
-  Pertanto abbiamo determinato i guadagni in tensione (Fig.\,\ref{fig:cross_gain}
-  ) dividendo le ampiezze osservate per il valore di $V_{in}$
-  osservato alla relativa frequenza, propagando le incertezze in quadratura (poiché casuali). Gli andamenti seguiti da queste funzioni sono: 
+  Pertanto abbiamo determinato i guadagni in tensione (Fig.\,\ref{fig:cross_gain}) dividendo le ampiezze osservate per
+  il valore di $V_{in}$
+  osservato alla relativa frequenza, propagando le incertezze in quadratura (poiché casuali).
+  Gli andamenti seguiti da queste funzioni sono:
 
   \begin{equation}
     \label{eq:gain_woofer}
@@ -118,7 +122,10 @@
 %Le funzioni guadagno si ottengono semplicemente dividendo le eq date per vin (NOTA: da riscrivere, non voglio
 %    duplicare le equazioni)
 
-Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla forma d'onda osservata come descritto in sezione 2. Ad essa è stata aggiunta l'incertezza strumentale sulla misura delle tensioni secondo le specifiche di ELVIS, poiché quelle ottenute da fit sono risultate minori di quanto lo strumento è in grado di risolvere. %DA VERIFICARE BENE
+  Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla forma d'onda osservata come descritto in
+  sezione\,\ref{sec:apparato-sperimentale}.
+  Ad essa è stata aggiunta l'incertezza strumentale sulla misura delle tensioni secondo le specifiche di ELVIS, poiché
+  quelle ottenute da fit sono risultate minori di quanto lo strumento è in grado di risolvere.%DA VERIFICARE BENE
 
   È stato effettuato un fit ai parametri $L$ e $C$ ($R$ fissata).
   Da essi è stata poi ricavata la frequenza di crossover secondo l'Eq.\,\eqref{eq:f_cross}.
@@ -129,13 +136,13 @@ Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla fo
     \begin{tabular}{c | c }
 
       %Heading
-      Grandezza & Valore                 \\
+      Grandezza                      & Valore                 \\
 
-      L         & $(10.52 \pm 0.01)$ mH  \\
-      C         & $(919.79 \pm 0.05)$ nF \\
-      $f_{cross}$ & \amplitudeF \\
-	$\widetilde{\chi}^2_{woofer}$	& 3.01  \\
-	$\widetilde{\chi}^2_{tweeter}$ & 0.89  
+      L                              & $(10.52 \pm 0.01)$ mH  \\
+      C                              & $(919.79 \pm 0.05)$ nF \\
+      $f_{cross}$                    & \amplitudeF            \\
+      $\widetilde{\chi}^2_{woofer}$  & 3.01                   \\
+      $\widetilde{\chi}^2_{tweeter}$ & 0.89
 
     \end{tabular}
 
@@ -149,26 +156,41 @@ Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla fo
   Tuttavia, l'andamento della curva $V_{in}$ ci fornisce un metodo ulteriore per determinare la frequenza di cross.
   Infatti, si dimostra che a tale frequenza l'impedenza totale del filtro è massima.
   Usando la legge di Ohm simbolica, ne segue che la tensione ai capi del filtro deve essere massima.
-  Cercando il massimo della curva sperimentale, otteniamo il valore $(1434 \pm 8) \;$ Hz, che risulta compatibile con il valore teorico stimato.
+  Cercando il massimo della curva sperimentale, otteniamo il valore $(1434 \pm 8)$~Hz, che risulta compatibile con il
+  valore teorico stimato.
   L'incertezza è stata determinata considerando metà del passo di scansione utilizzato nei pressi di quella frequenza
-  (come descritto in sezione 2, non è costante). Risulta pertanto essere un'incertezza massima.
-  
- %discussione del non venuto
- \begin{figure}[H]
+  (come descritto in sezione 2, non è costante).
+  Risulta pertanto essere un'incertezza massima.
+
+  %discussione del non venuto
+  \begin{figure}[H]
     \centering
 
-      \centering
-      \includegraphics[width=.50\textwidth]{cross_reduced_range.png}
-      \caption{Fit funzioni guadagno. Zoom nei pressi della frequenza di crossover.}
-      \label{fig: amp_gain_fit_reduced}
+    \centering
+    \includegraphics[width=.50\textwidth]{cross_reduced_range.png}
+    \caption{Fit funzioni guadagno. Zoom nei pressi della frequenza di crossover.}
+    \label{fig: amp_gain_fit_reduced}
 
 
   \end{figure}
-  
-La Fig.\,\ref{fig: amp_gain_fit_reduced} mostra gli andamenti del fit e dei valori sperimentali nei pressi della frequenza di crossover. Riguardo alla curva del Woofer, si può notare come questa si discosti oltre l'incertezza dai rispettivi dati a frequenze inferiori a quella di cross ottenuta mediante qs metodo (peraltro non compatibile con quella teorica). %questo è da rivedere
 
-A frequenze superiori, si osserva un progressivo riavvicinamento delle due curve. Una situazione analoga ma meno marcata si ha sulla curva del Tweeter. 
-I valori di $\chi^2$ ottenuti suggeriscono un andamento simile (cercare termine migliore) tra curva e dati (si, forse è contraddizione, ho sonno) e graficamente si osserva come l'intersezione tra le curve sperimentali e dei fit siano pressochè nello stesso valore. Pertanto, la stima risulta precisa ma non accurata poiché il cross risulta traslato rispetto alla predizione teorica (inserire immagine). Si può supporre che vi siano effetti reali che traslano sistematicamente il cross, i quali non sono tenuti in considerazione dal modello teorico, che pertanto risulta inaccurato per quanto riguarda la stima dell'ampiezza del segnale (un grafico di confronto con le stime teoriche aiuterà un botto) %prob da mettere nelle conslusioni
+  La Fig.\,\ref{fig: amp_gain_fit_reduced} mostra gli andamenti del fit e dei valori sperimentali nei pressi della
+  frequenza di crossover.
+  Riguardo alla curva del Woofer, si può notare come questa si discosti oltre l'incertezza dai rispettivi dati a
+  frequenze inferiori a quella di cross ottenuta mediante questo metodo (peraltro non compatibile con quella teorica).
+  %questo è da rivedere
+
+  A frequenze superiori, si osserva un progressivo riavvicinamento delle due curve.
+  Una situazione analoga ma meno marcata si ha sulla curva del Tweeter.
+  I valori di $\chi^2$
+  ottenuti suggeriscono un andamento simile (cercare termine migliore) tra curva e dati (si, forse è
+  contraddizione, ho sonno) e graficamente si osserva come l'intersezione tra le curve sperimentali e dei fit siano
+  pressoché nello stesso valore.
+  Pertanto, la stima risulta precisa ma non accurata poiché il cross risulta traslato rispetto alla predizione teorica
+  (inserire immagine).
+  Si può supporre che vi siano effetti reali che traslano sistematicamente il cross, i quali non sono tenuti in
+  considerazione dal modello teorico, che pertanto risulta inaccurato per quanto riguarda la stima dell'ampiezza del
+  segnale (un grafico di confronto con le stime teoriche aiuterà un botto) %prob da mettere nelle conslusioni
 
 \subsection{Analisi della fase}
 
@@ -191,31 +213,32 @@ I valori di $\chi^2$ ottenuti suggeriscono un andamento simile (cercare termine 
 
     \end{subfigure}
 
-    \caption{Fase del Tweeter misurata rispetto al Woofer (blu). Fase del Woofer misurata rispetto se stesso (giallo)
-      . La frequenza è in scala logaritmica. Le incertezze non sono visibili a causa della scala.}
+    \caption{Fase del Tweeter misurata rispetto al Woofer (blu). Fase del Woofer misurata rispetto se stesso (giallo).
+    La frequenza è in scala logaritmica. Le incertezze non sono visibili a causa della scala.}
     \label{fig: phase_diff}
 
   \end{figure}
 
-  La Fig.\,\ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la
+  La Fig.\,\ref{fig: pdiff_dataonly}
+  mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la
   relazione definita dall'Eq.\,\eqref{eq:p_diff}.
   La Fig.\,\ref{fig: pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura).
   Effettuando un fit con l'Eq.\,\eqref{eq:p_diff}, fissando $R$
-      poiché la frequenza di cross non dipende da esso, abbiamo
-      ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff_cross} abbiamo stimato la frequenza di cross.
+  poiché la frequenza di cross non dipende da esso, abbiamo
+  ricavato i valori $L$ e $C$, e grazie all'Eq.\,\eqref{eq:p_diff_cross} abbiamo stimato la frequenza di cross.
 
 
   \begin{table}[H]
     \centering
 
-\begin{tabular}{c | c }
+    \begin{tabular}{c | c }
 %Heading
-Grandezza & Valore  \\
-\hline
-L & $ 11.82 \pm 0.03 $  mH \\
-C & $ 1.037 \pm 0.002 $  $\mathrm{\mu}$F \\
-$f_{cross}$ & $ 1437 \pm 2$  Hz \\
-$\chi^2$ & $49.62$ 
+      Grandezza   & Valore                             \\
+      \hline
+      L           & $ 11.82 \pm 0.03 $  mH               \\
+      C           & $ 1.037 \pm 0.002 $  $\mathrm{\mu}$F \\
+      $f_{cross}$ & $ 1437 \pm 2$  Hz                    \\
+      $\chi^2$    & $49.62$
 
     \end{tabular}
     \caption{Risultati del fit dell'Eq.\,\eqref{eq:p_diff}}
@@ -229,20 +252,22 @@ $\chi^2$ & $49.62$
   Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui
   canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento
   temporale tra l'inizio delle due acquisizioni, che risulta essere pari a $\tau_{aq}=1 \mu \mathrm{S}$
-      secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore
-      al valore vero.
+  secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore
+  al valore vero.
 
-      Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$, dove $f$
-      rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
+  Questo è stato corretto aggiungendo alla fase misurata  $ 2 \pi f \tau_{aq}$, dove $f$
+  rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
 
-      In Fig.\,\ref{fig: phase_diff}
-      si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo
-      canale, risulta in realtà non nulla ma oscillante attorno a questo valore. L'ampiezza di dette oscillazioni
-      aumenta all'aumentare della frequenza. Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è
-      coerente con il fatto che la fase del tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della
-      fase si ripercuote su tutte le altre misure. Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i
-      valori misurati sul canale Woofer. Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data
-      frequenza poiché la fase del Woofer è in media 0.
+  In Fig.\,\ref{fig: phase_diff}
+  si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0 poiché il trigger è sul medesimo
+  canale, risulta in realtà non nulla ma oscillante attorno a questo valore.
+  L'ampiezza di dette oscillazioni aumenta all'aumentare della frequenza.
+  Questo fenomeno è stato osservato anche sulla fase del tweeter e la cosa è coerente con il fatto che la fase del
+  tweeter è misurata relativamente al Woofer: una fluttuazione nello 0 della fase si ripercuote su tutte le altre
+  misure.
+  Abbiamo corretto queste fluttuazioni sul canale Tweeter sottraendo i valori misurati sul canale Woofer.
+  Questo non ha influenzato il valore medio di sfasamento del Tweeter ad una data frequenza poiché la fase del Woofer
+  è in media 0.
 
 
 \end{document}
