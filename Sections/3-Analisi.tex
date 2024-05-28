@@ -186,13 +186,14 @@
   La Fig.\,\ref{fig:pdiff_dataonly} mostra lo sfasamento relativo Tweeter-Woofer (curva Tweeter in figura), che segue la
   relazione definita dall'Eq.\,\eqref{eq:p_diff}.
   Ai dati è stata assegnata un'incertezza casuale stimata mediante fit alla forma d'onda osservata per ogni frequenza,
-  come descritto in sezione 2.  
-  
-Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui
-  canali Analog Input) si ha che tra due canali acquisiti consecutivamente (come nel nostro caso) vi è uno sfasamento
-  temporale tra l'inizio delle due acquisizioni, che risulta essere pari a $\tau_{aq}=1 \mu \mathrm{S}$
-      secondo le specifiche di ELVIS, che si riflette in un errore sistematico sulla fase, che risulta essere inferiore
-      al valore vero.
+  come descritto nella sezione~\ref{sec:apparato-sperimentale}.
+
+  % Modificato
+  Inoltre, poiché l'acquisizione dei due canali non è simultanea ma sequenziale (mediante multiplexer che itera sui
+  canali Analog Input) si ha che tra di essi vi è uno sfasamento temporale tra l'inizio delle due acquisizioni
+  $\tau_{aq}=1$ \textmu S, secondo le specifiche di ELVIS, che si riflette in un errore
+  sistematico sulla fase, che risulta quindi essere inferiore al valore vero.
+  % Modificato
 
   Questo è stato corretto aggiungendo alla fase misurata $ 2 \pi \nu \cdot \tau_{aq}$, dove $\nu$
   rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
