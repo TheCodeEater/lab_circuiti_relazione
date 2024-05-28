@@ -8,6 +8,13 @@
 % Document
 \begin{document}
 
+A causa dell'acqusizione non simultanea dei canali analog input, vi è un errore sistematico sulla fase.
+Se il canale AI0 è acquisito al tempo t, l'onda osservata è pari a $A\sin(\omega t +\phi_1)$. Il canale AI1 è acquisito con un ritardo pari a $\tau_{aq} = 1$ \textmu S. L'onda acquisita è $A\sin(\omega t^* +\phi_2)$ con $t^*=t+\tau_{aq}$. Sostituendo $t*$, otteniamo:
 
+\begin{equation}
+A\sin(\omega t + \omega \tau_{aq} + \phi_2)
+\end{equation}
+
+La fase corretta risulta essere: $\omega \tau_{aq} + \phi_2$.
 
 \end{document}
