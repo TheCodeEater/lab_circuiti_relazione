@@ -18,11 +18,9 @@
     \item Due resistenze ($99.76 \pm 0.05$~\textOmega \hspace{1pt} su ramo Tweeter e $99.59 \pm 0.05$~\textOmega
     \hspace{1pt} su ramo Woofer), un condensatore ($1.03 \pm 0.01 $~\textmu F) e un'induttanza ($11.8 \pm 0.1$~mH)
   \end{itemize}
-
   La scheda millefori della Elvis ha fatto da base per il circuito, che è poi stato alimentato dal suo function
   generator, e tutte le misure sono state effettuate tramite il multimetro digitale e l'analog input multicanale sempre
-  della Elvis (si veda l'appendice\,\ref{sec:errori_strumentali} per il calcolo delle incertezze su questi dati).
-
+  della Elvis (si veda l'appendice \ref{sec:errori_strumentali} per il calcolo delle incertezze su questi dati). \\
   Il computer si è interfacciato con la scheda per gestire le operazioni di misura.
 \end{minipage}
 \hfill
@@ -30,9 +28,8 @@
   \centering
   \includegraphics[width=.93\textwidth]{Pipeline_scheme.png}
   \captionof{figure}{\label{fig:schema_pipeline}Schema acquisizione bufferizzata}
-\end{minipage}\vspace{1mm}
-\indent La componentistica elettrica è stata usata per realizzare il circuito.
-
+\end{minipage}
+La componentistica elettrica è stata usata per realizzare il circuito.
 È importante notare la bassa resistenza dell'induttanza utilizzata, trascurabile rispetto alle resistenze di carico
 (circa $1$ \textOmega), necessaria per la validità di tutte le formule utilizzate in questo articolo.
 
@@ -72,13 +69,14 @@
       \label{tab:parametri-daq}
     \end{minipage}
 
-  \end{minipage} \\
-  
-  Il range di acquisizione consente di ottenere curve simmetriche rispetto alla frequenza di cross per ampiezza e fase. L'incremento moltiplicativo è tale da generare un incremento  di step costante in scala logaritmica. La sample rate consente di acquisire con precisione le forme d'onda in tutto il range di scansione.
+  \end{minipage}
+  Il range di acquisizione consente di ottenere curve simmetriche rispetto alla frequenza di cross per ampiezza e fase.
+  L'incremento moltiplicativo è tale da generare un incremento  di step costante in scala logaritmica.
+  La sample rate consente di acquisire con precisione le forme d'onda in tutto il range di scansione.
 
-  Da questi dati abbiamo estratto con un fit della forma $ A \sin\left( \omega t + \phi \right) $ i valori di ampiezza e
+  Da questi dati abbiamo estratto con un fit della forma $ A \sin\left( 2 \pi \nu t + \phi \right) $ i valori di ampiezza e
   fase (come frequenza abbiamo usato quella del function generator, nota con un'incertezza assoluta di 0.186 Hz), che
   abbiamo utilizzato nella fase di analisi (Si veda la Fig.\,\ref{fig:schema_pipeline} per uno schema del processo
-  descritto)
+  descritto).
 
 \end{document}
