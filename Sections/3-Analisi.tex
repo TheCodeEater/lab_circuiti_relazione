@@ -8,6 +8,8 @@
 % Document
 \begin{document}
 
+\newcommand{\analysysFH}{4 cm}
+
 \subsection{Analisi preliminare qualitativa}
 
   \begin{figure}[H]
@@ -67,7 +69,7 @@
 
     \begin{subfigure}[t]{=0.49\textwidth}
 
-      \includegraphics[width=\textwidth]{cross_dataonly.png}
+      \includegraphics[width=\textwidth,height=\analysysFH]{cross_dataonly.png}
 
       \caption{Andamenti sperimentali di Tweeter, Woofer e Vin (segnale in ingresso nel filtro).}
       \label{fig: amplitude_dataonly}
@@ -76,7 +78,7 @@
     \hfill
     \begin{subfigure}[t]{=0.49\textwidth}
 
-      \includegraphics[width=\textwidth]{cross_gain_amplitude.png}
+      \includegraphics[width=\textwidth,height=\analysysFH]{cross_gain_amplitude.png}
 
       \caption
       {Andamenti sperimentali e fit dei guadagni in tensione.}
@@ -162,14 +164,14 @@
     \centering
 
     \begin{subfigure}[t]{=0.49\textwidth}
-      \includegraphics[width=\textwidth]{cross_reduced_range.png}
+      \includegraphics[width=\textwidth,height=\analysysFH]{cross_reduced_range.png}
       \caption{Confronto dati e fit.}
       \label{fig: amp_gain_fit_data_reduced}
 
     \end{subfigure}
     \hfill
     \begin{subfigure}[t]{=0.49\textwidth}
-      \includegraphics[width=\textwidth]{cross_reduced_range_theoric.png}
+      \includegraphics[width=\textwidth,height=\analysysFH]{cross_reduced_range_theoric.png}
       \caption{Confronto dati, fit e previsione teorica. Si noti la traslazione del cross tra teoria e dati.}
       \label{fig: amp_gain_fit_theoric_reduced}
     \end{subfigure}
@@ -203,7 +205,7 @@
 
     \begin{subfigure}{=0.49\textwidth}
       \centering
-      \includegraphics[width=.99\textwidth]{phase_dataonly.png}
+      \includegraphics[width=.99\textwidth,height=\analysysFH]{phase_dataonly.png}
       \caption{Sfasamento Tweeter-Woofer (solo dati)}
       \label{fig:pdiff_dataonly}
 
@@ -211,7 +213,7 @@
     \hfill
     \begin{subfigure}{=0.49\textwidth}
       \centering
-      \includegraphics[width=.99\textwidth]{phase_cross.png}
+      \includegraphics[width=.99\textwidth,height=\analysysFH]{phase_cross.png}
       \caption{Dati tweeter e sovrapposizione con fit}
       \label{fig:pdiff_fit_data}
 
