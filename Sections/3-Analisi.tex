@@ -119,6 +119,9 @@
 %Le funzioni guadagno si ottengono semplicemente dividendo le eq date per vin (NOTA: da riscrivere, non voglio
 %    duplicare le equazioni)
 
+\begin{minipage}{.49\textwidth}
+\setlength{\parindent}{20pt}
+
   Le incertezze sull'ampiezza sono state ottenute mediante fit sinusoidale alla forma d'onda osservata come descritto in
   sezione~\ref{sec:apparato-sperimentale}.
   Ad essa è stata aggiunta l'incertezza strumentale sulla misura delle tensioni secondo le specifiche di ELVIS, poiché
@@ -126,8 +129,10 @@
 
   È stato effettuato un fit ai parametri $L$ e $C$ ($R$ fissata poiché non determina la frequenza di cross).
   Da essi è stata poi ricavata la frequenza di crossover secondo l'Eq.\,\eqref{eq:f_cross}.
-
-  \begin{table}[H]
+\end{minipage}
+\hfill
+\begin{minipage}{.40\textwidth}
+\begin{table}[H]
     \centering
 
     \begin{tabular}{c | c }
@@ -147,6 +152,10 @@
     \label{tab:fit_amplitude}
 
   \end{table}
+\end{minipage}
+
+
+  
 
   La Tab.\,\ref{tab:fit_amplitude} mostra i risultati del fit.
   Si osserva che la frequenza ottenuta non risulta compatibile con il valore teorico stimato \theoryF.
@@ -241,7 +250,7 @@
   % Modificato
 
   Questo è stato corretto aggiungendo alla fase misurata $ 2 \pi \nu \cdot \tau_{aq}$, dove $\nu$
-  rappresenta la frequenza del segnale (si veda l'appendice per una spiegazione approfondita).
+  rappresenta la frequenza del segnale (si veda ~\ref{sec:correzione-dettagliata-errori-sistematici} per una spiegazione approfondita).
 
   In Fig.\,\ref{fig:pdiff_dataonly} si nota che la fase del Woofer rispetto se stesso, che ci aspettavamo essere 0
   poiché il trigger è sul medesimo canale, risulta in realtà non nulla ma oscillante attorno a questo valore e che
@@ -261,13 +270,12 @@
 
  
 
-\begin{minipage}{.6\textwidth}
+\begin{minipage}{.49\textwidth}
 \setlength{\parindent}{20pt}
   Il valore ottenuto è risultato compatibile con il valore teorico atteso~\theoryF.
-  La stima mediante analisi della fase risulta tuttavia più precisa, dato che presenta un'incertezza percentuale
-  dello~0.14\% contro lo~0.69\% del valore teorico.
-  Il $\chi^2$
-  ottenuto risulta molto maggiore del valore ottimale pari a~1.
+  %La stima mediante analisi della fase risulta tuttavia più precisa, dato che presenta un'incertezza percentuale
+  %dello~0.14\% contro lo~0.69\% del valore teorico.
+  Il $\chi^2$ ottenuto risulta molto maggiore del valore ottimale pari a~1.
   In effetti, il fit si discosta in maniera significativa dai dati a basse frequenze, risultando tuttavia più
   accurato nei pressi della frequenza di cross e ad alte frequenze.
   
